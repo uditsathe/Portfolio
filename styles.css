@@ -1,0 +1,325 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "General Sans";
+}
+
+html,body{
+    height:100%;
+    width: 100%;
+}
+
+#minicircle{
+    transition: all cubic-bezier(0.15,0.5,0.18,0.5) 0.3s;
+    width:18px;
+    height:18px;
+    position: absolute;
+    z-index:9999;
+    border-radius: 50%;
+    background-color: #fff;
+} 
+.bounding{
+    width: fit-content;
+    overflow: hidden;/*this keeps the titles that are outside the div invisible */
+}
+.bounding .boundingTitle{
+     transform: translateY(100%); /*this keeps the titles out of the div by default which then makes overflow hidden*/
+}
+#main{
+    width: 100%;
+    background-color: black;
+}
+
+#home{
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    color: white;
+    position: relative;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px; /* 35 made 20 here */
+    color: #fff;
+}
+#nav a{
+    text-decoration:none;
+    color: white;
+    /* font-size: 20px; */
+}
+#nav #titlePart a{
+    font-weight: 300;
+    font-size: 2vw;
+}
+#nav #navElems {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5vw;
+    font-weight: 200;
+}
+/*following section has the animation css for nav eliments*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.40s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+/*---------------------------------------------------------------*/
+#heading{
+   margin-top: 90px;
+}
+
+#heading h1{
+    margin-left:2.083vw;
+    line-height:1;
+    opacity: .65;
+    font-size: 10vw; 
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.bounding1{
+    background-color: red;
+    margin-bottom:1vw;   
+}
+.bounding2{
+    background-color: rgb(127, 228, 243);
+}
+#heading #secondh1 {
+margin-left: 11.97vw;
+}
+
+.blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+.blocktext h5{
+    text-transform: uppercase;
+    font-size:15px;
+    text-align: right;
+}
+
+ #smallheadings{
+    margin-top:80px;
+    padding-right:2.5vw;
+    padding-left:1.2vw;
+}
+
+#smallheadings h5{
+    text-align: left;
+    margin-top:.5vw;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+} 
+
+#homefooter{
+    padding:0 2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    justify-content: right;
+}
+#homefooter a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+#homefooter #iconset{
+    display:flex;
+    gap:5px;
+}
+
+#homefooter .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+#second{
+    color: #fff;
+    position: relative;
+    padding-top: 50px;
+    padding-right:10vw ;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: black;
+}
+
+#second a{
+    width:fit-content;
+    color:#fff;
+    text-decoration: none;
+}
+.project{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin-left: 2.5vw;
+    padding:3.5vw 3vw;
+    padding-right: 0;/*so that the year h5 is at the very end of div*/
+    border-top: 1px solid #888;
+}
+
+.project h1{
+    text-transform: uppercase;
+    font-size: 7.6vw;
+    opacity: .7;
+}
+.projectLast{
+    border-bottom: 1px solid #888;
+}
+.project img{
+    opacity: 0;
+    height: 140%;
+    z-index: 999;
+    position: absolute; 
+    pointer-events: none; /*********/
+    transform: translate(-50%, -50%);
+    margin-bottom: 40px;
+}
+
+#skills{
+    display:flex;
+    justify-content: center;
+    padding-top:8vw;
+}
+#skillTag{
+    width:30px;
+    padding-bottom: 0.5vw;
+}
+#skills #singleSkill{
+    width:100%;
+    align-items: center;
+    color: #fff;
+    padding:1vw 5vw ;
+}
+#skills ul{
+    width: 100%;
+}
+#skills li{
+    list-style-type:none;
+    margin:20px;
+    text-align: center;
+}
+
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    width:100vw;
+    color:white;
+    padding-top:10vw;
+    /* padding-right: 50vh; */
+    /*padding-left: 50vh; */
+    padding-bottom: 1vw;
+    background-color: black;
+}
+.outer-wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+#textabout {
+    align-items: center;
+    gap:10px;
+}
+
+#about img {
+    width:200px;
+    border-radius: 50%;
+}
+#textabout h4{
+    text-transform: uppercase;
+    font-size: 22px;
+    opacity: .6;
+}
+#textabout p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    width:35ch;
+}
+#textabout .specialTag{
+    text-decoration: none;
+    color: #fff;
+}
+#textabout #connectBox a {
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    width:100%;
+    background-color: black;
+    color:white;
+    margin-bottom:18px;
+}
+
+#footerLeft{
+    display:flex;
+    gap:20px;
+}
+#footerRight{
+    display:flex;
+    gap:20px;
+}
+#footer a{  
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*EXTRA CSS FOR ExPage PAGE*/
+.boundingExPage{
+    /*colour for this element must be set inline for different pages*/
+    margin-bottom:1vw;   
+}
+
+#heading h3{
+    margin-left:2.083vw;
+    line-height:1;
+    opacity: .65;
+    padding-left: 12vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
