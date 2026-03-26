@@ -53,34 +53,70 @@
             </div>
         </div>
         <div id="second">
-            <a href="https://ode-react-app.vercel.app/" target="_blank" target="_blank">
-                <div class="project">
+            <div class="projectWrapper">
+                <button class="project" type="button" aria-expanded="false" aria-controls="project-details-ode">
                     <img src="images/odeDemoGif.gif" alt="">
                     <h3>Ode</h3>
-                    <h5>2024</h5>
+                    <h5>2024 <span class="projectChevron" aria-hidden="true"></span></h5>
+                </button>
+
+                <div id="project-details-ode" class="projectDetailsWrapper" aria-hidden="true">
+                    <img class="projectDetailsImg" src="images/odeDemoGif.gif" alt="Ode preview">
+                    <div class="projectDetailsContent">
+                        <p class="projectDetailsDescription">A React demo showcasing interactive UI concepts and smooth user experience.</p>
+                        <a class="projectDetailsLink" href="https://ode-react-app.vercel.app/" target="_blank" rel="noreferrer">Check it out</a>
+                    </div>
                 </div>
-            </a>
-            <a href="https://stocksee.streamlit.app" target="_blank" target="_blank">
-                <div class="project">
+            </div>
+
+            <div class="projectWrapper">
+                <button class="project" type="button" aria-expanded="false" aria-controls="project-details-stocksee">
                     <img src="images/StockSee.png" alt="">
                     <h3>StockSee</h3>
-                    <h5>2023</h5>
+                    <h5>2023 <span class="projectChevron" aria-hidden="true"></span></h5>
+                </button>
+
+                <div id="project-details-stocksee" class="projectDetailsWrapper" aria-hidden="true">
+                        <img class="projectDetailsImg" src="images/StockSee.png" alt="StockSee preview">
+                        <div class="projectDetailsContent">
+                            <p class="projectDetailsDescription">A stock insights app that helps visualize trends and quickly explore key metrics.</p>
+                            <a class="projectDetailsLink" href="https://stocksee.streamlit.app" target="_blank" rel="noreferrer">Check it out</a>
+                        </div>
                 </div>
-            </a>
-            <a href="https://github.com/uditsathe/Bloggin" target="_blank">
-                <div class="project">
+            </div>
+
+            <div class="projectWrapper">
+                <button class="project" type="button" aria-expanded="false" aria-controls="project-details-bloggin">
                     <img src="images/blogginhp.png" alt="">
                     <h3>Bloggin</h3>
-                    <h5>2023</h5>
+                    <h5>2023 <span class="projectChevron" aria-hidden="true"></span></h5>
+                </button>
+
+                <div id="project-details-bloggin" class="projectDetailsWrapper" aria-hidden="true">
+                    <img class="projectDetailsImg" src="images/blogginhp.png" alt="Bloggin preview">
+                    <div class="projectDetailsContent">
+                        <p class="projectDetailsDescription">A blogging project with a focus on clean UI and practical full-stack features.</p>
+                        <a class="projectDetailsLink" href="https://github.com/uditsathe/Bloggin" target="_blank" rel="noreferrer">Check it out</a>
+                    </div>
                 </div>
-            </a>
-            <a href="https://github.com/uditsathe/NLP_Text_Summary_Generator" target="_blank">
-                <div class="project projectLast">
+            </div>
+
+            <div class="projectWrapper">
+                <button class="project projectLast" type="button" aria-expanded="false" aria-controls="project-details-text-summary">
                     <img src="images/nlpTextToSum.png" alt="">
                     <h3>Text Summary Generator</h3>
-                    <h5>2023</h5>
+                    <h5>2023 <span class="projectChevron" aria-hidden="true"></span></h5>
+                </button>
+
+                <div id="project-details-text-summary" class="projectDetailsWrapper projectDetailsLast" aria-hidden="true">
+                    <img class="projectDetailsImg" src="images/nlpTextToSum.png" alt="Text Summary Generator preview">
+                    <div class="projectDetailsContent">
+                        <p class="projectDetailsDescription">An NLP-powered text summarizer that turns long content into concise summaries.</p>
+                        <a class="projectDetailsLink" href="https://github.com/uditsathe/NLP_Text_Summary_Generator" target="_blank" rel="noreferrer">Check it out</a>
+                    </div>
+                
                 </div>
-            </a>
+            </div>
         </div>
         <div id="skills" class="skillDropDown outer-wrapper">
             <div id="skillsHeading" style="width:100%; align-items: center;">

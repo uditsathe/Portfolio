@@ -35,12 +35,6 @@ function firstPageAnim(){
         stagger:.2 //puts a small gap in the time at which the animations are triggered//
     })
 
-    
-    // .to(".circle",{
-    //     y:0,
-    //     duration:1.3,
-    //     ease:Expo.easeInOut
-    // })
 }
 
 
@@ -89,29 +83,25 @@ circleSkew();
 circleMouseFollower();
 firstPageAnim();
 
-//the querySelectorAll will return a list of all the elemts for each of which we will apply function
-document.querySelectorAll(".project").forEach(function(project){
-    var rotate=0;
-    var diffRot=0;
-    project.addEventListener("mouseleave", function(details){
-         gsap.to(project.querySelector("img"),{
-           opacity : 0,
-           duration:0.5,
-         });
-         });
 
-    project.addEventListener("mousemove", function(details){//does the following if the mouse moves over any class= project element//
-      
-        var diff= details.clientY-project.getBoundingClientRect().top;//this line finds at what distance below the top border of the div is you mouse
-       
-       diffRot=details.clientX - rotate;
-       rotate=details.clientX;
-    
-        gsap.to(project.querySelector("img"),{
-          opacity: 1,
-          top:diff,//this line finds at what distance below the top border of the div is you mouse,
-          left:details.clientX,
-          rotate:gsap.utils.clamp(-20,20,diffRot),
-        });
-    });
-});
+// Projects dropdown (vanilla)
+document.querySelectorAll(".project[aria-controls]").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var controlsId = btn.getAttribute("aria-controls")
+    var details = document.getElementById(controlsId)
+    if (!details) return
+
+    var currentlyExpanded = btn.getAttribute("aria-expanded") === "true"
+    var nextExpanded = !currentlyExpanded
+
+    btn.setAttribute("aria-expanded", String(nextExpanded))
+    details.classList.toggle("open", nextExpanded)
+    details.setAttribute("aria-hidden", String(!nextExpanded))
+
+    // Mark the header itself as open (extra safety for border styling)
+    btn.classList.toggle("open", nextExpanded)
+
+    var wrapper = btn.closest(".projectWrapper")
+    if (wrapper) wrapper.classList.toggle("open", nextExpanded)
+  })
+})
